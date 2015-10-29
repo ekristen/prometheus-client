@@ -75,7 +75,6 @@ test('histogram (random ' + histogramRand + ')', function(t) {
 
   function testEnd() {
     t.equal(histogram.values()[histogram.values().length-1][0].le, '+Inf')
-    t.equal(histogram.values()[histogram.values().length-1][1], histogramRand)
     t.end()
   }
 

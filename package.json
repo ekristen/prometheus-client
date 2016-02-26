@@ -8,14 +8,14 @@
   },
   "author": "Erik Kristensen <erik@erikkristensen.com>",
   "license": "MIT",
-	"repository": "ekristen/prometheus-client",
+  "repository": "ekristen/prometheus-client",
   "devDependencies": {
     "faucet": "0.0.1",
     "tape": "^4.2.2"
   },
   "dependencies": {
     "debug": "^2.2.0",
-    "object-hash": "^0.9.2",
+    "object-hash": "^1.1.2",
     "underscore": "^1.8.3",
     "xtend": "^4.0.0"
   }

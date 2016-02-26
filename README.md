@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ekristen/prometheus-client.svg?branch=master)](https://travis-ci.org/ekristen/prometheus-client)
 **STATUS: WIP -- Mostly implemented minus the summary metric**
 
 # Prometheus Client (Pure Javascript)

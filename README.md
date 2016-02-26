@@ -1,11 +1,14 @@
 [![Build Status](https://travis-ci.org/ekristen/prometheus-client.svg?branch=master)](https://travis-ci.org/ekristen/prometheus-client)
-**STATUS: WIP -- Mostly implemented minus the summary metric**
 
 # Prometheus Client (Pure Javascript)
+
+**STATUS: WIP -- Mostly implemented minus the summary metric**
 
 Originally based https://github.com/StreamMachine/prometheus_client_nodejs, but written without CoffeScript in just JavaScript. (Originally Licensed under Apache 2.0)
 
 [Prometheus](http://prometheus.io) instrumentation metrics library for Node.JS. Metrics are intended to be scraped by a Prometheus server.
+
+[![NPM Stats]](https://nodei.co/npm/prometheus-client-js.png?downloads=true&downloadRank=true&stars=true)
 
 ## Usage
 

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ekristen/prometheus-client.svg?branch=master)](https://travis-ci.org/ekristen/prometheus-client)
+[![Build Status](https://travis-ci.org/ekristen/prometheus-client.svg?branch=master)](https://travis-ci.org/ekristen/prometheus-client) [![npm](https://img.shields.io/npm/v/prometheus-client-js.svg)]() [![David](https://img.shields.io/david/ekristen/prometheus-client.svg)]() [![David](https://img.shields.io/david/dev/ekristen/prometheus-client.svg)]()
 
 # Prometheus Client (Pure Javascript)
 

@@ -8,7 +8,7 @@ Originally based https://github.com/StreamMachine/prometheus_client_nodejs, but 
 
 [Prometheus](http://prometheus.io) instrumentation metrics library for Node.JS. Metrics are intended to be scraped by a Prometheus server.
 
-[![NPM Stats]](https://nodei.co/npm/prometheus-client-js.png?downloads=true&downloadRank=true&stars=true)
+![NPM Stats](https://nodei.co/npm/prometheus-client-js.png?downloads=true&downloadRank=true&stars=true)
 
 ## Usage
 

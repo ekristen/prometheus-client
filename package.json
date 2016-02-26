@@ -1,6 +1,6 @@
 {
   "name": "prometheus-client-js",
-  "version": "2.3.2",
+  "version": "2.3.4",
   "description": "Prometheus Metrics Client implemented in Pure Node.JS",
   "main": "lib/client.js",
   "scripts": {

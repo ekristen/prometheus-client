@@ -13,6 +13,8 @@ There is no more built in HTTP server. The HTTP handler is still available if yo
 
 You can grab the metric output manually now by calling `getMetrics` on the instantiated Prometheus Client object.
 
+Version 3 is published as the `next` tag in npm registry. Needs some more testing before officially releasing it.
+
 ## Usage
 
 ### Getting Started

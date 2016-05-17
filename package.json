@@ -1,16 +1,19 @@
 {
   "name": "prometheus-client-js",
-  "version": "2.3.6",
+  "version": "3.0.0",
   "description": "Prometheus Metrics Client implemented in Pure Node.JS",
   "main": "lib/client.js",
   "scripts": {
-    "test": "node test.js | faucet"
+    "test": "npm run test:standard && npm run test:code",
+    "test:code": "node test.js | faucet",
+    "test:standard": "standard lib/*.js"
   },
   "author": "Erik Kristensen <erik@erikkristensen.com>",
   "license": "MIT",
   "repository": "ekristen/prometheus-client",
   "devDependencies": {
     "faucet": "0.0.1",
+    "standard": "^7.1.0",
     "tape": "^4.2.2"
   },
   "dependencies": {

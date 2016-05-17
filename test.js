@@ -8,7 +8,7 @@ test('counter (random ' + counterRand + ')', function(t) {
   var Prometheus = require("./lib/client")
   var client = new Prometheus()
 
-  var counter = client.newCounter({
+  var counter = client.createCounter({
     namespace: "counter_test",
     name: "elapsed_counters_total",
     help: "The number of counter intervals that have elapsed."
@@ -36,7 +36,7 @@ test('gauge (random ' + gaugeRand + ')', function(t) {
   var Prometheus = require("./lib/client")
   var client = new Prometheus()
 
-  var gauge = client.newGauge({
+  var gauge = client.createGauge({
     namespace: "gauge_test",
     name: "random_number",
     help: "A random number we occasionally set."
@@ -67,7 +67,7 @@ test('histogram (random ' + histogramRand + ')', function(t) {
   var Prometheus = require("./lib/client")
   var client = new Prometheus()
   
-  var histogram = client.newHistogram({
+  var histogram = client.createHistogram({
     namespace: "histogram_test",
     name: "random_histogram",
     help: "random historgram",

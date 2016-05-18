@@ -33,6 +33,53 @@ var client = new Prometheus()
 The client library can create an HTTP app to serve up your metrics, or you
 can point to the output function from your own app router.
 
+### Counter
+
+```javascript
+var Prometheus = require('prometheus-client-js')
+var client = new Prometheus()
+
+var myCounter = client.createCounter({
+  namespace: 'example',
+  subsystem: 'readme',
+  name: 'hits'
+})
+
+// This will increment the counter by 1
+myCounter.increment()
+
+// You can also specify labels to further group your increments
+myCounter.increment({
+  path: 'README.md#counter'
+})
+```
+
+Counting HTTP request with additional labels
+
+**Caveat** You don't want to get to granular with your labels, Proemtheus advises against this. In the below example if you don't have too many paths this would be ok, but if you have thousands of paths, it could become an issue.
+
+If you have a limited number of paths, you can use this setup, but you'd want to exclude query strings as that could infinitely increase the number of metrics created.
+
+```javascript
+var Prometheus = require('prometheus-client-js')
+var client = new Prometheus()
+
+var myCounter = client.createCounter({
+  namespace: 'example',
+  subsystem: 'http',
+  name: 'requests'
+})
+
+// You can also specify labels to further group your increments
+myCounter.increment({
+  path: '/README.md',
+  method: 'GET',
+  status: 200
+})
+```
+
+
+
 ## Metric Types
 
 1. Counter (http://prometheus.io/docs/concepts/metric_types/#counter)

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test:standard && npm run test:code",
     "test:code": "node test.js | faucet",
-    "test:standard": "standard lib/*.js"
+    "test:standard": "standard lib/*.js test.js"
   },
   "author": "Erik Kristensen <erik@erikkristensen.com>",
   "license": "MIT",

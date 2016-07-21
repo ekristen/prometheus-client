@@ -9,7 +9,7 @@ Originally based https://github.com/StreamMachine/prometheus_client_nodejs, but 
 
 ## Major Changes in v4
 
-Labels are now the secondard argument to most metrics, having labels first, just didn't make sense in the node paradigm.
+Labels are now the secondard argument to most metrics, having labels first, just didn't make sense for node.js.
 
 ## Major Changes in V3
 
@@ -81,6 +81,10 @@ myCounter.increment({
   status: 200
 })
 ```
+
+### Gauge
+
+### Histogram
 
 
 

@@ -11,14 +11,6 @@ Originally based https://github.com/StreamMachine/prometheus_client_nodejs, but 
 
 Labels are now the secondard argument to most metrics, having labels first, just didn't make sense for node.js.
 
-## Major Changes in V3
-
-There is no more built in HTTP server. The HTTP handler is still available if you'd like to use it but it makes certain assumptions. Like the url will match `/metrics`.
-
-You can grab the metric output manually now by calling `getMetrics` on the instantiated Prometheus Client object.
-
-Version 3 is published as the `next` tag in npm registry. Needs some more testing before officially releasing it.
-
 ## Usage
 
 ### Getting Started

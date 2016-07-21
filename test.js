@@ -50,9 +50,9 @@ test('gauge (random ' + gaugeRand + ')', function(t) {
   var interval = setInterval(function() {
     var gaugeNum = Math.random() * 1000
 
-    gauge.set({
+    gauge.set(gaugeNum, {
         period: "1sec"
-    }, gaugeNum);
+    });
     
     t.deepEqual(gauge.values(), [ [ { period: '1sec' }, gaugeNum ] ])
 
@@ -82,6 +82,34 @@ test('histogram (random ' + histogramRand + ')', function(t) {
   var interval = setInterval(function() {
     var rand = Math.random() * (0 + 10) + 1
     histogram.observe(rand)
+
+    if (++x == histogramRand) {
+      clearInterval(interval)
+      testEnd()
+    }
+  }, 150)
+})
+
+
+test('histogram with labels (random ' + histogramRand + ')', function(t) {
+  var Prometheus = require("./lib/client")
+  var client = new Prometheus()
+  
+  var histogram = client.createHistogram({
+    namespace: "histogram_test",
+    name: "random_histogram",
+    help: "random historgram",
+  })
+
+  function testEnd() {
+    t.equal(histogram.values()[histogram.values().length-1][0].le, '+Inf')
+    t.end()
+  }
+
+  var x = 0
+  var interval = setInterval(function() {
+    var rand = Math.random() * (0 + 10) + 1
+    histogram.observe(rand, {path:'/', status: 200})
 
     if (++x == histogramRand) {
       clearInterval(interval)

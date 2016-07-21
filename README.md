@@ -7,6 +7,10 @@ Originally based https://github.com/StreamMachine/prometheus_client_nodejs, but 
 
 ![NPM Stats](https://nodei.co/npm/prometheus-client-js.png?downloads=true&downloadRank=true&stars=true)
 
+## Major Changes in v4
+
+Labels are now the secondard argument to most metrics, having labels first, just didn't make sense in the node paradigm.
+
 ## Major Changes in V3
 
 There is no more built in HTTP server. The HTTP handler is still available if you'd like to use it but it makes certain assumptions. Like the url will match `/metrics`.
